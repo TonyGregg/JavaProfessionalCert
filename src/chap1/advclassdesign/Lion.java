@@ -16,7 +16,7 @@ public class Lion {
 
     private int id;
 
-    @Override public boolean equals(Object o) {
+    public boolean equals(Lion o) {
         if(o == null || ! (o instanceof Lion)) return false;
         if (this == o) return true;
         Lion otherLion = (Lion) o;
@@ -27,5 +27,19 @@ public class Lion {
     public int hashCode() {
 
         return Objects.hash(id);
+    }
+
+    public static void main(String[] args) {
+        Lion lion1 = new Lion();
+        lion1.setId(100);
+
+        Lion lion2 = new Lion();
+        lion2.setId(100);
+
+        if (lion1.equals(lion2)) {
+            System.out.println("Same .. same");
+        } else {
+            System.out.println("No. ..no");
+        }
     }
 }
