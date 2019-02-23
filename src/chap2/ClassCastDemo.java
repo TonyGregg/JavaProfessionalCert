@@ -3,7 +3,7 @@ package chap2;
 /**
  * Created by genil on 2/16/19 at 12 34
  **/
-public class ClassChaptDemo {
+public class ClassCastDemo {
     public static void main(String[] args) {
 
         Parent parent = new Parent();
