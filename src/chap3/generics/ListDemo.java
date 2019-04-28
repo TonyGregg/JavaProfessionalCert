@@ -15,7 +15,7 @@ public class ListDemo {
 
         Giraffee giraffee = new Giraffee();
 
-        System.out.println(strings.contains(giraffee));
+        System.out.println(strings.contains(giraffee)); // false
 
     }
 }

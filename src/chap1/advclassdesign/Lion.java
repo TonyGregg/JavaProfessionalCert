@@ -5,7 +5,20 @@ import java.util.Objects;
 /**
  * Created by genil on 1/12/19 at 21 32
  **/
-public class Lion {
+
+abstract class Cat{
+    String name = "The Cat";
+       void clean() {
+
+    }
+}
+public class Lion extends Cat{
+
+//     static void clean() {
+//
+//    }
+
+
     public int getId() {
         return id;
     }
