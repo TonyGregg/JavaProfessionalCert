@@ -32,6 +32,12 @@ public class CamparableComparator {
 
         System.out.println("After Sorting : " + footballTeam);
 
+        int portNumber;
+        portNumber = 8080;
+//        portNumber = 9090;
+
+        Runnable runnable = ()-> System.out.println(portNumber);
+
 
     }
 }
