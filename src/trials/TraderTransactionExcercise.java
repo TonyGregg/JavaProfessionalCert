@@ -50,9 +50,13 @@ public class TraderTransactionExcercise {
 
         List<Trader> cambridgeTraders = transactions.stream().map(Transaction::getTrader)
                 .filter(trader -> trader.getCity().equals("Cambridge"))
+                .distinct() // Remove duplicates from the txs
                 .sorted(comparing(Trader::getName)).collect(toList());
 
         System.out.println(cambridgeTraders);
+
+        // Q4) Any traders based in Milan
+        boolean isMilanBased = transactions.stream().anyMatch(transaction -> transaction.getTrader().getCity().equals("Milan"));
 
 
 
