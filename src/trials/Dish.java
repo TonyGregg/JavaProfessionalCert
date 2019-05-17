@@ -1,6 +1,7 @@
 package trials;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 
 import static java.util.stream.Collectors.toList;
@@ -72,6 +73,25 @@ public class Dish {
                 collect(toList());
 
         System.out.println(threeHighCaloricDishes1);
+
+        // Get the length of all dish names
+
+        List<Integer> dishNameLengths = menu.stream().
+                map(Dish::getName).
+                map(String::length).collect(toList());
+
+        System.out.println(dishNameLengths);
+
+        // flatMap - flattens each generated stream into a single stream
+
+        String[] words = {"Hello","World"};
+
+        List<String>uniqueChars =  Arrays.stream(words).map(word -> word.split("")).
+                flatMap(Arrays::stream).
+                distinct().collect(toList());
+
+
+        System.out.println(uniqueChars);
 
 
     }
