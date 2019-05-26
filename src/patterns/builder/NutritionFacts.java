@@ -15,6 +15,17 @@ public class NutritionFacts {
         this.sodium = builder.sodium;
         this.fat = builder.fat;
     }
+
+    @Override
+    public String toString() {
+        return "NutritionFacts{" +
+                "servingSize=" + servingSize +
+                ", servings=" + servings +
+                ", sodium=" + sodium +
+                ", fat=" + fat +
+                '}';
+    }
+
     public static class Builder {
 
         private final int servingSize;
