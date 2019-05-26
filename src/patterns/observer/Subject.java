@@ -17,6 +17,6 @@ package patterns.observer;
 public interface Subject {
 
     void registerObserver(Observer observer);
-    void notifyObservers();
+    void notifyObservers(String tweet);
 
 }
