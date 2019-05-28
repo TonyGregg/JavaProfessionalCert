@@ -1,6 +1,6 @@
 package threads.pricefinder;
 
-import static org.genil.learning.java8.threads.pricefinder.Util.delay;
+import static threads.pricefinder.Util.delay;
 
 public class ExchangeService {
 

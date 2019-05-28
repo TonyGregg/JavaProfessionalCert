@@ -6,8 +6,9 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
-import static org.genil.learning.java8.threads.ConcurrentUtils.sleep;
-import static org.genil.learning.java8.threads.ConcurrentUtils.stop;
+import static threads.ConcurrentUtils.sleep;
+import static threads.ConcurrentUtils.stop;
+
 
 /**
  * Created by genil on 6/12/18 at 05 21

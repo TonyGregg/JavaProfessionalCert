@@ -1,6 +1,7 @@
 package lambda;
 
-import org.genil.learning.java8.collections.Apple;
+
+import collections.Apple;
 
 import java.util.ArrayList;
 import java.util.List;

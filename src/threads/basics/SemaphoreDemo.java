@@ -6,9 +6,9 @@ import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.IntStream;
 
-import static org.genil.learning.java8.threads.ConcurrentUtils.sleep;
-import static org.genil.learning.java8.threads.ConcurrentUtils.stop;
-
+import static threads.ConcurrentUtils.sleep;
+import static threads.ConcurrentUtils.stop;
+import static threads.pricefinder.Util.*;
 /**
  * Created by genil on 6/12/18 at 06 16
  **/

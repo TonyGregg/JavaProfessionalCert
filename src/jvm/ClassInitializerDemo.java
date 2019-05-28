@@ -39,8 +39,11 @@ public class ClassInitializerDemo {
 
     public static void main(String[] args) {
         new ClassInitializerDemo();
-        System.out.println(Sub.FINAL1);
         System.out.println(Sub.FINAL2);
+        System.out.println(Sub.FINAL1);
+
+
+
         new Sub();
     }
 }

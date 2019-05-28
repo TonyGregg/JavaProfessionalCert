@@ -1,11 +1,14 @@
 package threads.basics;
 
+import threads.ConcurrentUtils;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.IntStream;
 
-import static org.genil.learning.java8.threads.ConcurrentUtils.stop;
+import static threads.ConcurrentUtils.stop;
+
 
 /**
  * Created by genil on 6/11/18 at 21 53
