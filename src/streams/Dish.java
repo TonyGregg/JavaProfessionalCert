@@ -71,12 +71,27 @@ public class Dish {
 
 //        System.out.println(fishDishes);
         //other way to print
-        fishDishes.forEach(System.out::println);
+//        fishDishes.forEach(System.out::println);
 
         // Group by example
 
         Map<Type, List<Dish>> dishesByType = menu.stream()
                                                 .collect(Collectors.groupingBy(Dish::getType));
+
+        List<String> highCalorieDishes = menu.stream()
+                .filter(dish -> {
+                    System.out.println("filtering ." +dish.getName());
+                    return dish.getCalories() > 400;
+                })
+                .map(dish -> {
+                    System.out.println("mapping ." +dish.getName());
+                    return dish.getName();
+                })
+                .skip(2)
+                .collect(Collectors.toList());
+
+
+        System.out.println(highCalorieDishes);
     }
 
 
