@@ -49,7 +49,7 @@ public class Dish {
 
     public enum Type {MEAT, FISH, OTHER}
 
-    public static void main(String[] args) {
+    public static List<Dish> getMenu() {
         List<Dish> menu = Arrays.asList(
                 new Dish("pork", false, 800, Dish.Type.MEAT),
                 new Dish("beef", false, 700, Dish.Type.MEAT),
@@ -61,6 +61,12 @@ public class Dish {
                 new Dish("Prawns", false, 300, Dish.Type.FISH),
                 new Dish("Shrimps", false, 600, Dish.Type.FISH),
                 new Dish("Salmon", false, 450, Dish.Type.FISH));
+
+        return menu;
+    }
+
+    public static void main(String[] args) {
+        List<Dish> menu = getMenu();
 
         // play with streams
         // Get my favorite dish - Fish types !
