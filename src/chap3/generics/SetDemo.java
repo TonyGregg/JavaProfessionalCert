@@ -29,6 +29,7 @@ public class SetDemo {
         System.out.println(integers.floor(10)); // 10
         System.out.println(integers.floor(1)); // 1
         System.out.println(integers.floor(0)); // null
+        System.out.println(integers.floor(30)); // 20
 
         System.out.println("...... ...... ceiling ............");
 

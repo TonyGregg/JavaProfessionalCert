@@ -12,6 +12,7 @@ public class ListDemo {
 
         strings.add("Elisha");
         strings.add("Jotham");
+//        strings.set(20, "Tony"); // IndexOutOfBoundsException : 20 out of bounds for length 2
 
         Giraffee giraffee = new Giraffee();
 
