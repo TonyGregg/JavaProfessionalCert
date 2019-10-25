@@ -1,8 +1,11 @@
 package chap3.generics;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.time.LocalDate;
 import java.util.*;
 import java.util.function.BiFunction;
+import java.util.function.BiPredicate;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
@@ -63,7 +66,13 @@ public class Java8Additions {
         System.out.println(localDate);
 
         // Consumer Demo
-        Consumer<Squirrel> squirrelConsumer;
+        Consumer<Squirrel> squirrelConsumer = System.out::println;
+        squirrelConsumer.accept(new Squirrel());
+
+        //Bi predicate
+        BiPredicate<String, String > stringBiPredicate = String::startsWith;
+        BiPredicate<String, String > stringBiPredicate2 = (string, prefix) -> string.startsWith(prefix);
+        System.out.println("Bi predi res : "+stringBiPredicate.test("Chicken","Chic"));
 
     }
 }
