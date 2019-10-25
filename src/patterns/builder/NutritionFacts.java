@@ -77,6 +77,8 @@ public class NutritionFacts {
         stack.push(25);
         stack.push(26);
 
+
+
         System.out.println(stack.poll());
         System.out.println(stack.pop());
 

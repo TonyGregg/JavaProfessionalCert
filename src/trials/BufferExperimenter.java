@@ -16,6 +16,8 @@ public class BufferExperimenter {
     }
 
     public static void main(String[] args) {
+        Boolean isFlagSet = Boolean.valueOf(true);
+
         BufferExperimenter bufferExperimenter = new BufferExperimenter();
         try {
             String oneLine = bufferExperimenter.processFile(BufferedReader::readLine);

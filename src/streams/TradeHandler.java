@@ -113,7 +113,12 @@ public class TradeHandler {
                         -> transaction.getValue() < transaction2.getValue()? transaction : transaction2)
                 ;
 
-        System.out.println("Smallest trx : "+smallestTrx.get());
+        // you can do better using compar
+
+        Optional<Transaction> smallTrx1 = transactions.stream()
+                .min(Comparator.comparing(Transaction::getValue));
+
+        System.out.println("Smallest trx : "+smallestTrx.get() + " ... .. "+smallTrx1.get());
 
 
 

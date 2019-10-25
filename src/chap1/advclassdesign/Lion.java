@@ -11,6 +11,9 @@ abstract class Cat{
        void clean() {
 
     }
+    Cat() {
+        System.out.println("Abstract Cat's default constructor");
+    }
 }
 public class Lion extends Cat{
 

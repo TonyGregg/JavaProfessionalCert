@@ -59,9 +59,21 @@ public class EnumDemo {
 
         Season.SPRING.printHours();
 
-        Season season = Season.FALL;
+        Season season = Season.SPRING;
         System.out.println(Season.WINTER.ordinal());
         season.printHours();
+
+        switch (season) {
+            case WINTER:
+                System.out.println("Sema kulir");
+                break;
+            case FALL:
+                System.out.println("Varapoghuthu.. enjoy pannu konja nall " + season.getExpectedVisitors());
+                break;
+            case SPRING:
+                System.out.println("Enna oru vasantha kalam !! aha. ." + season.getExpectedVisitors());
+                break;
+        }
 
 
     }
