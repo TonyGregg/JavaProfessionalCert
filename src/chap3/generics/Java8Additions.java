@@ -1,7 +1,10 @@
 package chap3.generics;
 
+import java.time.LocalDate;
 import java.util.*;
 import java.util.function.BiFunction;
+import java.util.function.Consumer;
+import java.util.function.Supplier;
 
 /**
  * Created by Antony Genil on 2019-10-24 at 18 15 for JavaProfessionalCert
@@ -49,5 +52,18 @@ public class Java8Additions {
         System.out.println(favorites);
         System.out.println(jenny); // Bus Tours
         System.out.println(tom); // Skiride
+
+        // Supplier demo
+        Supplier<LocalDate> localDateSupplier = () -> LocalDate.now();
+        Supplier<LocalDate> localDateSupplier2 = LocalDate::now;
+
+        LocalDate localDate = localDateSupplier.get();
+        System.out.println(localDate);
+        localDate = localDateSupplier2.get();
+        System.out.println(localDate);
+
+        // Consumer Demo
+        Consumer<Squirrel> squirrelConsumer;
+
     }
 }
