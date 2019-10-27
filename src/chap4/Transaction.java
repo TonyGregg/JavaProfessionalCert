@@ -1,4 +1,4 @@
-package streams;
+package chap4;
 
 /**
  * Created by Antony Genil on 2019-05-31 at 08 25 for JavaProfessionalCert

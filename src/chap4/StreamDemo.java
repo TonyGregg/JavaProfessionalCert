@@ -1,5 +1,6 @@
-package chap3.generics;
+package chap4;
 
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Optional;
 import java.util.function.BinaryOperator;
@@ -31,6 +32,30 @@ public class StreamDemo {
         integerStream = Stream.of(2,3,15);
 
         integerStream.reduce(binInteger).ifPresent(System.out::println);
+
+        // filter
+        Stream<String> stringStream2 = Stream.of("monkey","ape","Zeebra");
+        stringStream2.filter(s -> s.startsWith("m")).forEach(System.out::println);
+
+        // limit and skip
+        Stream<Integer> integerStream1 = Stream.iterate(1, n -> n + 1);
+        integerStream1.skip(9).limit(2).forEach(x -> {System.out.print(x + ",");});
+
+        // map
+        Stream<String> stringStream3 = Stream.of("One","Two",
+                "Three","Four","Five","Six....","Seven...");
+         integerStream = stringStream3.map(String::length);
+        System.out.println("Mapped.. ");
+         integerStream.forEach(x -> System.out.print(" "+x));
+        System.out.println("\nFlatMap demo");
+         // flat map
+        String[][] data = new String[][]{{"a", "b"}, {"c", "d","a"}, {"e", "f","a"}};
+        Stream<String[]> streamStrArray = Arrays.stream(data);
+        stringStream2 = streamStrArray.flatMap(x -> Arrays.stream(x)); // flat map to Stream<String>
+        stringStream2.filter(s -> "a".equalsIgnoreCase(s)).forEach(System.out::println);
+
+
+
 
 
     }

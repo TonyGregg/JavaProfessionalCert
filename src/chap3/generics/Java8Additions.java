@@ -74,5 +74,6 @@ public class Java8Additions {
         BiPredicate<String, String > stringBiPredicate2 = (string, prefix) -> string.startsWith(prefix);
         System.out.println("Bi predi res : "+stringBiPredicate.test("Chicken","Chic"));
 
+
     }
 }

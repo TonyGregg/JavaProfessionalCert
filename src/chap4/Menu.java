@@ -1,4 +1,4 @@
-package streams;
+package chap4;
 
 /**
  * Created by anton on 6/9/2018 10:19 AM
