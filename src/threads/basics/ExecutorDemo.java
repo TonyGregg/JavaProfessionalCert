@@ -13,21 +13,24 @@ public class ExecutorDemo {
             System.out.println("It all begins here now .. .");
             executorService.execute(()-> System.out.println("Printing zoo inventory "));
 
-           Future<?> future = executorService.submit(()-> {
-                for (int i = 0; i < 5; i++) {
+           Future<Integer> future = executorService.submit(()-> {
+                for (int i = 0; i < 500; i++) {
                     System.out.println("Zoo inv # "+i);
                 }
 
+                return 300;
+
             });
 
-           future.get(500,TimeUnit.SECONDS);
-            System.out.println("Reached");
+           Integer res  = future.get(1,TimeUnit.SECONDS);
+           System.out.println("Reached : cx"+res);
 
-            executorService.execute(()-> System.out.println("Printing another zoo inventory now"));
-            System.out.println("End it man ");
-
-
-        } finally {
+           executorService.execute(()-> System.out.println("Printing another zoo inventory now"));
+           System.out.println("End it man ");
+        } catch (TimeoutException timeOutException) {
+            System.out.println("Not reached on time");
+        }
+        finally {
             if(executorService!=null) {
                 executorService.shutdown();
             }

@@ -21,7 +21,11 @@ public class SchedulerDemo {
         ScheduledExecutorService scheduledExecutorService = Executors.newScheduledThreadPool(10);
 
 //        scheduledExecutorService.scheduleAtFixedRate(task,0,1,TimeUnit.SECONDS);
-
         scheduledExecutorService.scheduleWithFixedDelay(task,0,1,TimeUnit.SECONDS);
+        scheduledExecutorService.schedule(task,  1, TimeUnit.SECONDS);
+        System.out.println("# of processors "+Runtime.getRuntime().availableProcessors());
+        if (!scheduledExecutorService.isTerminated()) {
+            scheduledExecutorService.shutdown();
+        }
     }
 }
