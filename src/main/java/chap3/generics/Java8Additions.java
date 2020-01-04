@@ -1,7 +1,5 @@
 package chap3.generics;
 
-import org.w3c.dom.ls.LSOutput;
-
 import java.time.LocalDate;
 import java.util.*;
 import java.util.function.BiFunction;

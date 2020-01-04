@@ -8,7 +8,6 @@ import java.util.stream.IntStream;
 
 import static threads.ConcurrentUtils.sleep;
 import static threads.ConcurrentUtils.stop;
-import static threads.pricefinder.Util.*;
 /**
  * Created by genil on 6/12/18 at 06 16
  **/

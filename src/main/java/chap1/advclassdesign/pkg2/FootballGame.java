@@ -1,6 +1,6 @@
 package chap1.advclassdesign.pkg2;
 
-import static chap1.advclassdesign.pkg1.Football.*;
+import static chap1.advclassdesign.pkg1.Football.TEAM_SIZE;
 
 /**
  * Created by genil on 2/11/19 at 08 15

@@ -10,15 +10,15 @@ import java.util.concurrent.TimeUnit;
 public class ProducerConsumer {
     public static void main(String[] args) {
         BlockingQueue<Integer> blockingQueue = new ArrayBlockingQueue(20);
-        new Thread(new Prodcuer(blockingQueue)).start();
+        new Thread(new Producer(blockingQueue)).start();
         new Thread((new Consumer(blockingQueue))).start();
 
     }
 }
 
-class Prodcuer implements Runnable {
+class Producer implements Runnable {
 
-    public Prodcuer(BlockingQueue<Integer> sharedQueue) {
+    public Producer(BlockingQueue<Integer> sharedQueue) {
 
         this.sharedQueue = sharedQueue;
     }

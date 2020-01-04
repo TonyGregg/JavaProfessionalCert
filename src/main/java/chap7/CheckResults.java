@@ -1,7 +1,5 @@
 package chap7;
 
-import threads.basics.CheckResult;
-
 /**
  * Created by Antony Genil Gregory on 10/27/2019 9:49 AM
  * For project : JavaProfessionalCert
