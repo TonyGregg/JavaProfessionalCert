@@ -20,5 +20,8 @@ public class SimpleThreadDemo {
     public static void main(String[] args) {
         SimpleThreadDemo demo = new SimpleThreadDemo();
         demo.executeMillionTimes();
+        new Thread(() -> {
+            int i = 23;
+        }).start();
     }
 }

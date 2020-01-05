@@ -54,6 +54,10 @@ public class User {
     }
 
     public static void main(String[] args) {
+        User user = new User.Builder("antonygenil@gmail.com","male").age(38).build();
+
+        System.out.println(user);
+
 
     }
 

@@ -33,5 +33,13 @@ public class DateTimeDemo {
         System.out.println(ChronoUnit.MONTHS.between(localDate, localDate1));
 
         System.out.println("Default locale "+ Locale.getDefault());
+
+        LocalTime t1 = LocalTime.of(10,10);
+        LocalTime t2 = LocalTime.of(20,1);
+
+        long due = Duration.between(t2, t1).toHours();
+
+        System.out.println("Duration "+due);
+
     }
 }
